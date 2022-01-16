@@ -1,0 +1,8 @@
+- name: "Restart 'devd' dynamic device management service"
+  ansible.builtin.service:
+    name: devd
+    state: restarted
+  become: true
+  become_user: root
+  listen: restart_devd
+

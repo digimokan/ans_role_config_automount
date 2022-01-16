@@ -1,0 +1,3 @@
+- name: "Install automount utility"
+  ansible.builtin.include_tasks: install/main.yml
+
