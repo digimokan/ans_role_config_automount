@@ -1,0 +1,14 @@
+galaxy_info:
+  author: digimokan
+  description: "Install and configure the automount device-mounting utility"
+  license: "MIT"
+  min_ansible_version: 2.5
+  platforms:
+    - name: FreeBSD
+      versions:
+        - all
+  galaxy_tags:
+    - freebsd
+    - mount
+    - automount
+
