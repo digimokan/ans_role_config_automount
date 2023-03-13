@@ -1,0 +1,18 @@
+# support auto-mounting exFAT filesystems
+automount_exfat_filesystems: true
+
+# support auto-mounting NTFS filesystems
+automount_ntfs_filesystems: true
+
+# support auto-mounting ext2 or ext4 filesystems
+automount_ext2_ext4_filesystems: true
+
+# support auto-mounting HFS filesystems
+automount_hfs_filesystems: false
+
+# support auto-mounting XFS filesystems
+automount_xfs_filesystems: false
+
+# support auto-mounting MTP filesystems
+automount_mtp_filesystems: false
+

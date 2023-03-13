@@ -1,9 +1,6 @@
-- name: "Install the 'automount' package"
-  ansible.builtin.package:
-    name: automount
-    state: present
-  become: true
-  become_user: root
-  notify:
-    - restart_devd
+- name: "Install main automount utility"
+  ansible.builtin.include_tasks: main_utility.yml
+
+- name: "Install filesystem-support libs"
+  ansible.builtin.include_tasks: fs_support_libs.yml
 

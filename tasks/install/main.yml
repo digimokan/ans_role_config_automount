@@ -1,4 +1,4 @@
-- name: "Install automount utility for FreeBSD"
+- name: "Install automount utility and filesystem-support libs for FreeBSD"
   ansible.builtin.include_tasks: freebsd/main.yml
   when: ansible_os_family == "FreeBSD"
 

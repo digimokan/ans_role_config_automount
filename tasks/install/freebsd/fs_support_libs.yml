@@ -1,0 +1,50 @@
+- name: "Install exfat-utils and fusefs-exfat packages (for exFAT support)"
+  ansible.builtin.package:
+    name:
+      - sysutils/exfat-utils
+      - sysutils/fusefs-exfat
+    state: present
+  become: true
+  become_user: root
+  when: automount_exfat_filesystems
+
+- name: "Install fusefs-ntfs package (for NTFS R/W support)"
+  ansible.builtin.package:
+    name: sysutils/fusefs-ntfs
+    state: present
+  become: true
+  become_user: root
+  when: automount_ntfs_filesystems
+
+- name: "Install fusefs-ext2 package (for ext2/ext4 support)"
+  ansible.builtin.package:
+    name: sysutils/fusefs-ext2
+    state: present
+  become: true
+  become_user: root
+  when: automount_ext2_ext4_filesystems
+
+- name: "Install fusefs-hfsfuse package (for HFS support)"
+  ansible.builtin.package:
+    name: sysutils/fusefs-hfsfuse
+    state: present
+  become: true
+  become_user: root
+  when: automount_hfs_filesystems
+
+- name: "Install fusefs-lkl package (for XFS support)"
+  ansible.builtin.package:
+    name: sysutils/fusefs-lkl
+    state: present
+  become: true
+  become_user: root
+  when: automount_xfs_filesystems
+
+- name: "Install fusefs-simple-mtpfs package (for MTP support)"
+  ansible.builtin.package:
+    name: sysutils/fusefs-simple-mtpfs
+    state: present
+  become: true
+  become_user: root
+  when: automount_mtp_filesystems
+
