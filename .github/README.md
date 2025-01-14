@@ -11,12 +11,16 @@ Install and configure the automount automatic device-mounting utility.
 * [Supported Operating Systems](#supported-operating-systems)
 * [Quick Start](#quick-start)
     * [Use From Playbook](#use-from-playbook)
+* [Role Options](#role-options)
 * [Contributing](#contributing)
 
 ## Purpose
 
 * Install and configure the [automount](https://github.com/vermaden/automount)
   automatic device-mounting utility.
+* NOTE: this FreeBSD software conflicts with the native FreeBSD _autofs_ service
+  which also supports device mounting. Confusingly, _autofs_ also bundles
+  utilities called _automount_.
 
 ## Supported Operating Systems
 
@@ -52,6 +56,12 @@ Install and configure the automount automatic device-mounting utility.
          ansible.builtin.include_role:
            name: ans_role_config_automount
    ```
+
+## Role Options
+
+Vars with default values, which can be overridden in the playbook:
+
+  * [overridable](../defaults/main/overridable/main.yml)
 
 ## Contributing
 
