@@ -10,7 +10,7 @@
 
 - name: "Install 'fusefs-ntfs' package (for NTFS R/W support)"
   ansible.builtin.package:
-    name: fusefs-ntps
+    name: fusefs-ntfs
     state: present
   become: true
   become_user: root
@@ -34,7 +34,7 @@
 
 - name: "Install 'fusefs-lkl' package (for XFS support)"
   ansible.builtin.package:
-    name: filesystems/lkl
+    name: fusefs-lkl
     state: present
   become: true
   become_user: root
