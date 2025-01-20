@@ -1,0 +1,13 @@
+- name: "Disable the built-in 'autofs' service's device-mounting feature"
+  ansible.builtin.lineinfile:
+    path: "{{ automount_autofs_auto_master_path }}"
+    regexp: >-
+      ^/media (.*)$
+    line: >-
+      #/media \1
+    state: present
+    backrefs: true
+    backup: true
+  become: true
+  become_user: root
+

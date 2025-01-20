@@ -1,0 +1,6 @@
+# uninstall and disable other device auto-mounters
+automount_remove_other_auto_mounters: true
+
+# path to autofs's auto_master config file
+automount_autofs_auto_master_path: '/etc/auto_master'
+

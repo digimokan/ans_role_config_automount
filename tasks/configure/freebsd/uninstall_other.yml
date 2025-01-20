@@ -1,0 +1,7 @@
+- name: "Uninstall the 'devd-mount' package"
+  ansible.builtin.package:
+    name: devd-mount
+    state: absent
+  become: true
+  become_user: root
+

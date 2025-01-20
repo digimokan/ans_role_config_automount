@@ -1,0 +1,8 @@
+- name: "Uninstall other auto-mounters"
+  ansible.builtin.include_tasks: uninstall_other.yml
+  when: automount_remove_other_auto_mounters
+
+- name: "Disable other auto-mounters"
+  ansible.builtin.include_tasks: disable_other.yml
+  when: automount_remove_other_auto_mounters
+
