@@ -2,9 +2,9 @@
   ansible.builtin.lineinfile:
     path: "{{ automount_autofs_auto_master_path }}"
     regexp: >-
-      ^/media (.*)$
+      ^/media(.*)$
     line: >-
-      #/media \1
+      #/media\1
     state: present
     backrefs: true
     backup: true
